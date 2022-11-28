@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.HBox?>
 
@@ -9,17 +10,29 @@
    <children>
       <Button fx:id="scissors" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#OnScissorsClick" prefHeight="600.0" prefWidth="333.0">
          <graphic>
-            <ImageView fitHeight="600.0" fitWidth="333.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fitHeight="301.0" fitWidth="333.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../../../../Pictures/361-3618497_scissors-clipart-19-scissors-image-graphic-huge-freebie.png" />
+               </image>
+            </ImageView>
          </graphic>
       </Button>
-      <Button fx:id="stone" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#OnStoneClick" prefHeight="600.0" prefWidth="333.0" text="Button">
+      <Button fx:id="stone" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#OnStoneClick" prefHeight="600.0" prefWidth="333.0">
          <graphic>
-            <ImageView fitHeight="600.0" fitWidth="333.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fitHeight="227.0" fitWidth="220.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../../../../Pictures/image_processing20210612-767-1ib2eof.png" />
+               </image>
+            </ImageView>
          </graphic>
       </Button>
-      <Button fx:id="paper" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#OnPaperClick" prefHeight="600.0" prefWidth="334.0" text="Button">
+      <Button fx:id="paper" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#OnPaperClick" prefHeight="600.0" prefWidth="334.0">
          <graphic>
-            <ImageView fitHeight="600.0" fitWidth="334.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fitHeight="233.0" fitWidth="247.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../../../../Pictures/64750.jpg" />
+               </image>
+            </ImageView>
          </graphic>
       </Button>
    </children>
