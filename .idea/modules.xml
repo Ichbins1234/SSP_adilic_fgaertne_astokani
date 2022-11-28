@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/SSP/SSP.iml" filepath="$PROJECT_DIR$/SSP/SSP.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/SSP_adilic_fgaertne_astokani.iml" filepath="$PROJECT_DIR$/.idea/SSP_adilic_fgaertne_astokani.iml" />
+    </modules>
+  </component>
+</project>
