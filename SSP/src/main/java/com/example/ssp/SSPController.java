@@ -15,6 +15,23 @@ public class SSPController {
     @FXML
     private Button stone;
 
+    private int choice;
+
+    @FXML
+    public void OnScissorsClick() {
+        choice = 1;
+    }
+
+    @FXML
+    public void OnStoneClick() {
+        choice = 2;
+    }
+
+    @FXML
+    public void OnPaperClick() {
+        choice = 3;
+    }
+
 
 
 }
