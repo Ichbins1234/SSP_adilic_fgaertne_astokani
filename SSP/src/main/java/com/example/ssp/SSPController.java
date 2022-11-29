@@ -19,12 +19,14 @@ public class SSPController {
 
     private int choice;
 
+
     Random random = new Random();
     int choice2 = random.nextInt();
 
     private String player = "player";
     private String ai = "AI";
     private String winner = "";
+
 
 
     @FXML
@@ -41,6 +43,7 @@ public class SSPController {
     public void OnPaperClick() {
         choice = 3;
     }
+
     
     @FXML
     public void Winner(){
@@ -59,6 +62,7 @@ public class SSPController {
         }
     }
     
+
 
 
 
