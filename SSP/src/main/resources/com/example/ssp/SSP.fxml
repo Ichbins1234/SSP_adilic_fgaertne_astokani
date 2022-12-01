@@ -7,17 +7,17 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane fx:id="anchorpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Button fx:id="scissors" mnemonicParsing="false" prefHeight="600.0" prefWidth="333.0" stylesheets="@style.css">
+      <Button fx:id="scissors" mnemonicParsing="false" prefHeight="600.0" prefWidth="334.0" stylesheets="@style.css">
          <graphic>
-            <ImageView fitHeight="220.0" fitWidth="294.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="220.0" fitWidth="322.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../images/361-3618497_scissors-clipart-19-scissors-image-graphic-huge-freebie.png" />
                </image>
             </ImageView>
          </graphic></Button>
-      <Button fx:id="stone" layoutX="334.0" mnemonicParsing="false" prefHeight="600.0" prefWidth="333.0">
+      <Button fx:id="stone" layoutX="334.0" mnemonicParsing="false" prefHeight="600.0" prefWidth="333.0" style="-fx-background-color: #BAA286;">
          <graphic>
             <ImageView fitHeight="209.0" fitWidth="171.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -35,6 +35,11 @@
          </graphic>
       </Button>
       <Text layoutX="387.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Rock Paper Scissors">
+         <font>
+            <Font name="System Bold" size="26.0" />
+         </font>
+      </Text>
+      <Text layoutX="785.0" layoutY="83.0" strokeType="OUTSIDE" strokeWidth="0.0" text="High Score:">
          <font>
             <Font name="System Bold" size="26.0" />
          </font>
