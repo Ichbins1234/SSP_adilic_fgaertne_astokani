@@ -19,7 +19,7 @@
          </graphic></Button>
       <Button fx:id="stone" layoutX="334.0" mnemonicParsing="false" onAction="#onStoneClick" prefHeight="600.0" prefWidth="333.0" style="-fx-background-color: #BAA286;">
          <graphic>
-            <ImageView fitHeight="209.0" fitWidth="171.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="imgviewmiddle" fitHeight="209.0" fitWidth="171.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../images/image_processing20210612-767-1ib2eof.png" />
                </image>
