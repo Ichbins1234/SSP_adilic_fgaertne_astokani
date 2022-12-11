@@ -9,3 +9,16 @@
     -fx-background-color: #BAA286;
 }
 
+#fountain {
+    -fx-background-color: #BAA286;
+    -fx-border-color: black;
+    -fx-border-width: 1px;
+}
+
+#exit {
+    -fx-background-color: lightblue;
+}
+
+#play {
+    -fx-background-color: lightblue;
+}

@@ -7,7 +7,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane fx:id="anchorpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ssp.SSPController">
+<AnchorPane fx:id="anchorpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ssp.SSPController">
    <children>
       <Button fx:id="scissors" mnemonicParsing="false" onAction="#onScissorsClick" prefHeight="600.0" prefWidth="334.0" stylesheets="@style.css">
          <graphic>
@@ -17,29 +17,45 @@
                </image>
             </ImageView>
          </graphic></Button>
-      <Button fx:id="stone" layoutX="334.0" mnemonicParsing="false" onAction="#onStoneClick" prefHeight="600.0" prefWidth="333.0" style="-fx-background-color: #BAA286;">
+      <Button fx:id="stone" layoutX="334.0" mnemonicParsing="false" onAction="#onStoneClick" prefHeight="600.0" prefWidth="333.0" stylesheets="@style.css">
          <graphic>
-            <ImageView fx:id="imgviewmiddle" fitHeight="209.0" fitWidth="171.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="imgviewmiddle" fitHeight="220.0" fitWidth="322.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../images/image_processing20210612-767-1ib2eof.png" />
                </image>
             </ImageView>
          </graphic></Button>
+      <Button fx:id="fountain" layoutX="457.0" layoutY="525.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#onFountainClick" prefHeight="30.0" prefWidth="100.0" stylesheets="@style.css" text="Fountain" />
       <Button fx:id="paper" layoutX="667.0" mnemonicParsing="false" onAction="#onPaperClick" prefHeight="600.0" prefWidth="334.0" stylesheets="@style.css">
          <graphic>
-            <ImageView fx:id="imgviewright" fitHeight="191.0" fitWidth="197.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="imgviewright" fitHeight="220.0" fitWidth="322.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../images/64750.jpg" />
                </image>
             </ImageView>
          </graphic>
       </Button>
+      <Button fx:id="exit" layoutX="667.0" layoutY="431.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#onExitClick" prefHeight="100.0" prefWidth="200.0" stylesheets="@style.css" text="EXIT" visible="false">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Button>
+      <Button fx:id="play" layoutX="134.0" layoutY="431.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#onPlayClick" prefHeight="100.0" prefWidth="200.0" stylesheets="@style.css" text="Button" visible="false">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Button>
       <Text fx:id="rockpaperscissors" layoutX="387.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Rock Paper Scissors">
          <font>
             <Font name="System Bold" size="26.0" />
          </font>
       </Text>
-      <Text fx:id="highscore" layoutX="785.0" layoutY="83.0" strokeType="OUTSIDE" strokeWidth="0.0" text="High Score:">
+      <Text fx:id="highscore" layoutX="785.0" layoutY="83.0" strokeType="OUTSIDE" strokeWidth="0.0" text="High Score: 0">
+         <font>
+            <Font name="System Bold" size="26.0" />
+         </font>
+      </Text>
+      <Text fx:id="score" layoutX="78.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Current Score: 0">
          <font>
             <Font name="System Bold" size="26.0" />
          </font>
