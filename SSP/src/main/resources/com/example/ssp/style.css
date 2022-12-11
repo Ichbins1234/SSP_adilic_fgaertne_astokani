@@ -1,11 +1,4 @@
-#scissors{
-    -fx-background-color: #BAA286;
-}
-#paper{
-    -fx-background-color: #BAA286;
-}
-
-#stone {
+#scissors, #paper, #stone{
     -fx-background-color: #BAA286;
 }
 
@@ -15,10 +8,6 @@
     -fx-border-width: 1px;
 }
 
-#exit {
-    -fx-background-color: lightblue;
-}
-
-#play {
+#exit, #play {
     -fx-background-color: lightblue;
 }
