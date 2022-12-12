@@ -43,10 +43,10 @@ public class SSPController {
     private String winner = "";
 
     //4 images
-    private Image image = new Image("C:\\HTL\\3AHITN\\ITP2\\IntelliJ\\SSP_adilic_fgaertne_astokani\\SSP\\src\\main\\resources\\images\\image_processing20210612-767-1ib2eof.png");
-    private Image image1 = new Image("C:\\HTL\\3AHITN\\ITP2\\IntelliJ\\SSP_adilic_fgaertne_astokani\\SSP\\src\\main\\resources\\images\\64750.jpg");
-    private Image image2 = new Image("C:\\HTL\\3AHITN\\ITP2\\IntelliJ\\SSP_adilic_fgaertne_astokani\\SSP\\src\\main\\resources\\images\\361-3618497_scissors-clipart-19-scissors-image-graphic-huge-freebie.png");
-    private Image image3 = new Image("C:\\HTL\\3AHITN\\ITP2\\IntelliJ\\SSP_adilic_fgaertne_astokani\\SSP\\src\\main\\resources\\images\\720Brunnen.png");
+    private Image image = new Image("H:\\3AHITN\\ITP2\\SSP\\SSP\\src\\main\\resources\\images\\image_processing20210612-767-1ib2eof.png");
+    private Image image1 = new Image("H:\\3AHITN\\ITP2\\SSP\\SSP\\src\\main\\resources\\images\\64750.jpg");
+    private Image image2 = new Image("H:\\3AHITN\\ITP2\\SSP\\SSP\\src\\main\\resources\\images\\361-3618497_scissors-clipart-19-scissors-image-graphic-huge-freebie.png");
+    private Image image3 = new Image("H:\\3AHITN\\ITP2\\SSP\\SSP\\src\\main\\resources\\images\\720Brunnen.png");
 
     //choose stone,scissors,paper or fountain
     @FXML
@@ -54,7 +54,7 @@ public class SSPController {
         if (!check) {
             choice = 1;
             move();
-            setImgviewright();
+
         }
     }
 
@@ -166,6 +166,7 @@ public class SSPController {
         exit.setVisible(false);
         imgviewright.setImage(image1);
         imgviewleft.setImage(image2);
+        rockpaperscissors.setText("Rock Paper Scissors");
         if (Objects.equals(play.getText(), "Play Again")) {
             score.setText("Current Score: 0");
             checkFountain = false;
