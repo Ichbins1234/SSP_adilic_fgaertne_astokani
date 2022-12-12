@@ -54,7 +54,7 @@ public class SSPController {
     private String ai = "AI";
     private String winner = "";
 
-    //4 images
+    //4 images Path!!
     private Image image = new Image("C:\\3AHITN\\SEW\\SSP_adilic_fgaertne_astokani\\SSP\\src\\main\\resources\\images\\image_processing20210612-767-1ib2eof.png");
     private Image image1 = new Image("C:\\3AHITN\\SEW\\SSP_adilic_fgaertne_astokani\\SSP\\src\\main\\resources\\images\\64750.jpg");
     private Image image2 = new Image("C:\\3AHITN\\SEW\\SSP_adilic_fgaertne_astokani\\SSP\\src\\main\\resources\\images\\361-3618497_scissors-clipart-19-scissors-image-graphic-huge-freebie.png");
