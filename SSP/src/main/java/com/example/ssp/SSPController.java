@@ -3,6 +3,7 @@ package com.example.ssp;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.ProgressBar;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.text.Text;
@@ -18,6 +19,10 @@ public class SSPController {
     @FXML
     private Text score;
     @FXML
+    private Button stop;
+    @FXML
+    private Button tryAgain;
+    @FXML
     public Button play;
     @FXML
     public Button exit;
@@ -27,6 +32,10 @@ public class SSPController {
     private ImageView imgviewright;
     @FXML
     private ImageView imgviewleft;
+    @FXML
+    private ProgressBar progBar;
+    @FXML
+    private Button fountain;
     private int choice;
 
     //to check if button has been pressed
@@ -43,10 +52,10 @@ public class SSPController {
     private String winner = "";
 
     //4 images
-    private Image image = new Image("H:\\3AHITN\\ITP2\\SSP\\SSP\\src\\main\\resources\\images\\image_processing20210612-767-1ib2eof.png");
-    private Image image1 = new Image("H:\\3AHITN\\ITP2\\SSP\\SSP\\src\\main\\resources\\images\\64750.jpg");
-    private Image image2 = new Image("H:\\3AHITN\\ITP2\\SSP\\SSP\\src\\main\\resources\\images\\361-3618497_scissors-clipart-19-scissors-image-graphic-huge-freebie.png");
-    private Image image3 = new Image("H:\\3AHITN\\ITP2\\SSP\\SSP\\src\\main\\resources\\images\\720Brunnen.png");
+    private Image image = new Image("H:\\ITP2\\3AHITN\\IntelliJ\\SSP_adilic_fgaertne_astokani\\SSP\\src\\main\\resources\\images\\image_processing20210612-767-1ib2eof.png");
+    private Image image1 = new Image("H:\\ITP2\\3AHITN\\IntelliJ\\SSP_adilic_fgaertne_astokani\\SSP\\src\\main\\resources\\images\\64750.jpg");
+    private Image image2 = new Image("H:\\ITP2\\3AHITN\\IntelliJ\\SSP_adilic_fgaertne_astokani\\SSP\\src\\main\\resources\\images\\361-3618497_scissors-clipart-19-scissors-image-graphic-huge-freebie.png");
+    private Image image3 = new Image("H:\\ITP2\\3AHITN\\IntelliJ\\SSP_adilic_fgaertne_astokani\\SSP\\src\\main\\resources\\images\\720Brunnen.png");
 
     //choose stone,scissors,paper or fountain
     @FXML
@@ -54,7 +63,6 @@ public class SSPController {
         if (!check) {
             choice = 1;
             move();
-
         }
     }
 
@@ -106,7 +114,7 @@ public class SSPController {
         setImgviewright();
     }
 
-    //check winner, keep score if its a draw
+    //check winner, keep score if it's a draw
     public void winner() {
         if (choice == 1 && choice2 == 3) {
             winner = player;
@@ -130,31 +138,38 @@ public class SSPController {
             winner = "Draw";
         }
 
+        String d = score.getText();
+        String e = d.substring(15);
+        int f = Integer.parseInt(e);
         if (Objects.equals(winner, player)) {
             rockpaperscissors.setText("You are the Winner");
             String b = highscore.getText();
             String c = b.substring(12);
             int a = Integer.parseInt(c);
-            String d = score.getText();
-            String e = d.substring(15);
-            int f = Integer.parseInt(e);
             f++;
+            progBar.setProgress(progBar.getProgress()+0.1);
             score.setText("Current score: " + f);
             if (f > a) {
                 a++;
                 highscore.setText("High Score: " + a);
+                if (f==10){
+                    finish();
+                }
             }
             play.setText("Next Round");
         } else if (Objects.equals(winner, ai)) {
             rockpaperscissors.setText("You are the Loser");
             play.setText("Play Again");
+            progBar.setProgress(0);
         } else if (Objects.equals(winner, "Draw")) {
             rockpaperscissors.setText("It's a draw");
             play.setText("Next Round");
         }
 
-        play.setVisible(true);
-        exit.setVisible(true);
+        if (f!=10){
+            play.setVisible(true);
+            exit.setVisible(true);
+        }
     }
 
     //play again/next round
@@ -177,6 +192,35 @@ public class SSPController {
     @FXML
     public void onExitClick() {
         System.exit(0);
+    }
+
+
+    public void finish(){
+        check=true;
+        score.setVisible(false);
+        highscore.setVisible(false);
+        rockpaperscissors.setText("You are the best of all time (GOAT)!!!");
+        fountain.setVisible(false);
+        play.setVisible(false);
+        exit.setVisible(false);
+        imgviewleft.setVisible(false);
+        imgviewright.setVisible(false);
+        tryAgain.setVisible(true);
+        stop.setVisible(true);
+    }
+
+    public void onTryAgainClick(){
+        onPlayClick();
+        checkFountain=false;
+        imgviewleft.setVisible(true);
+        imgviewright.setVisible(true);
+        tryAgain.setVisible(false);
+        stop.setVisible(false);
+        fountain.setVisible(true);
+        score.setVisible(true);
+        score.setText("Current Score: 0");
+        highscore.setVisible(true);
+        progBar.setProgress(0);
     }
 }
 
