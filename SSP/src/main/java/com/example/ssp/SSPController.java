@@ -4,6 +4,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ProgressBar;
+import javafx.scene.control.ProgressIndicator;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.text.Text;
@@ -35,6 +36,8 @@ public class SSPController {
     @FXML
     private ProgressBar progBar;
     @FXML
+    private ProgressIndicator progIndicator;
+    @FXML
     private Button fountain;
     private int choice;
 
@@ -52,10 +55,10 @@ public class SSPController {
     private String winner = "";
 
     //4 images
-    private Image image = new Image("H:\\ITP2\\3AHITN\\IntelliJ\\SSP_adilic_fgaertne_astokani\\SSP\\src\\main\\resources\\images\\image_processing20210612-767-1ib2eof.png");
-    private Image image1 = new Image("H:\\ITP2\\3AHITN\\IntelliJ\\SSP_adilic_fgaertne_astokani\\SSP\\src\\main\\resources\\images\\64750.jpg");
-    private Image image2 = new Image("H:\\ITP2\\3AHITN\\IntelliJ\\SSP_adilic_fgaertne_astokani\\SSP\\src\\main\\resources\\images\\361-3618497_scissors-clipart-19-scissors-image-graphic-huge-freebie.png");
-    private Image image3 = new Image("H:\\ITP2\\3AHITN\\IntelliJ\\SSP_adilic_fgaertne_astokani\\SSP\\src\\main\\resources\\images\\720Brunnen.png");
+    private Image image = new Image("C:\\3AHITN\\SEW\\SSP_adilic_fgaertne_astokani\\SSP\\src\\main\\resources\\images\\image_processing20210612-767-1ib2eof.png");
+    private Image image1 = new Image("C:\\3AHITN\\SEW\\SSP_adilic_fgaertne_astokani\\SSP\\src\\main\\resources\\images\\64750.jpg");
+    private Image image2 = new Image("C:\\3AHITN\\SEW\\SSP_adilic_fgaertne_astokani\\SSP\\src\\main\\resources\\images\\361-3618497_scissors-clipart-19-scissors-image-graphic-huge-freebie.png");
+    private Image image3 = new Image("C:\\3AHITN\\SEW\\SSP_adilic_fgaertne_astokani\\SSP\\src\\main\\resources\\images\\720Brunnen.png");
 
     //choose stone,scissors,paper or fountain
     @FXML
@@ -148,6 +151,7 @@ public class SSPController {
             int a = Integer.parseInt(c);
             f++;
             progBar.setProgress(progBar.getProgress()+0.1);
+            progIndicator.setProgress(progIndicator.getProgress()+0.1);
             score.setText("Current score: " + f);
             if (f > a) {
                 a++;
@@ -161,6 +165,7 @@ public class SSPController {
             rockpaperscissors.setText("You are the Loser");
             play.setText("Play Again");
             progBar.setProgress(0);
+            progIndicator.setProgress(0);
         } else if (Objects.equals(winner, "Draw")) {
             rockpaperscissors.setText("It's a draw");
             play.setText("Next Round");
