@@ -194,7 +194,7 @@ public class SSPController {
         System.exit(0);
     }
 
-
+    //if you won 10 times in a row
     public void finish(){
         check=true;
         score.setVisible(false);
@@ -209,6 +209,7 @@ public class SSPController {
         stop.setVisible(true);
     }
 
+    //if you finished the game and want to play again
     public void onTryAgainClick(){
         onPlayClick();
         checkFountain=false;
