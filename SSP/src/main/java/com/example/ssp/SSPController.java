@@ -54,11 +54,7 @@ public class SSPController {
     private String ai = "AI";
     private String winner = "";
 
-    //4 images Path!!!
-    private Image image = new Image("C:\\3AHITN\\SEW\\SSP_adilic_fgaertne_astokani\\SSP\\src\\main\\resources\\images\\image_processing20210612-767-1ib2eof.png");
-    private Image image1 = new Image("C:\\3AHITN\\SEW\\SSP_adilic_fgaertne_astokani\\SSP\\src\\main\\resources\\images\\64750.jpg");
-    private Image image2 = new Image("C:\\3AHITN\\SEW\\SSP_adilic_fgaertne_astokani\\SSP\\src\\main\\resources\\images\\361-3618497_scissors-clipart-19-scissors-image-graphic-huge-freebie.png");
-    private Image image3 = new Image("C:\\3AHITN\\SEW\\SSP_adilic_fgaertne_astokani\\SSP\\src\\main\\resources\\images\\720Brunnen.png");
+
 
     //choose stone,scissors,paper or fountain
     @FXML
@@ -73,7 +69,7 @@ public class SSPController {
     public void onStoneClick() {
         if (!check) {
             choice = 2;
-            imgviewleft.setImage(image);
+            imgviewleft.setImage(new Image(getClass().getResource("images/image_processing20210612-767-1ib2eof.png").toExternalForm()));
             move();
         }
     }
@@ -82,7 +78,7 @@ public class SSPController {
     public void onPaperClick() throws InterruptedException {
         if (!check) {
             choice = 3;
-            imgviewleft.setImage(image1);
+            imgviewleft.setImage(new Image(getClass().getResource("images/64750.jpg").toExternalForm()));
             move();
         }
     }
@@ -93,7 +89,7 @@ public class SSPController {
         if (!check && !checkFountain) {
             checkFountain = true;
             choice = 4;
-            imgviewleft.setImage(image3);
+            imgviewleft.setImage(new Image(getClass().getResource("images/720Brunnen.png").toExternalForm()));
             move();
         }
     }
@@ -102,9 +98,9 @@ public class SSPController {
     public void setImgviewright() {
         choice2 = random.nextInt(3) + 1;
         if (choice2 == 1) {
-            imgviewright.setImage(image2);
+            imgviewright.setImage(new Image(getClass().getResource("images/361-3618497_scissors-clipart-19-scissors-image-graphic-huge-freebie.png").toExternalForm()));
         } else if (choice2 == 2) {
-            imgviewright.setImage(image);
+            imgviewright.setImage(new Image(getClass().getResource("images/image_processing20210612-767-1ib2eof.png").toExternalForm()));
         }
         winner();
         rockpaperscissors.setVisible(true);
@@ -184,8 +180,8 @@ public class SSPController {
         check = false;
         play.setVisible(false);
         exit.setVisible(false);
-        imgviewright.setImage(image1);
-        imgviewleft.setImage(image2);
+        imgviewleft.setImage(new Image(getClass().getResource("images/361-3618497_scissors-clipart-19-scissors-image-graphic-huge-freebie.png").toExternalForm()));
+        imgviewright.setImage(new Image(getClass().getResource("images/64750.jpg").toExternalForm()));
         rockpaperscissors.setText("Rock Paper Scissors");
         if (Objects.equals(play.getText(), "Play Again")) {
             score.setText("Current Score: 0");
