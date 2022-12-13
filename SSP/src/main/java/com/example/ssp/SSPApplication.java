@@ -23,6 +23,7 @@ public class SSPApplication extends Application {
         stage.show();
     }
 
+    //add music
     MediaPlayer mediaPlayer;
     public void music(){
         String s = "SSP/src/main/resources/com/example/ssp/music/8d82b5_Star_Wars_Main_Theme_Song.mp3";
