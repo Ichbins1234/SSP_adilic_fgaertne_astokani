@@ -15,19 +15,7 @@
 #exit, #play {
     -fx-background-color: lightblue;
 }
-#scissors:hover
-{
-    -fx-background-radius: 15;
-
-    -fx-background-color: silver;
-}
-#paper:hover{
-
-    -fx-background-radius: 15;
-    -fx-background-color: silver;
-}
-#stone:hover{
-
+#scissors:hover, #paper:hover, #stone:hover {
     -fx-background-radius: 15;
     -fx-background-color: silver;
 }
