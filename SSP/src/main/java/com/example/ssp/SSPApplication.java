@@ -14,7 +14,7 @@ public class SSPApplication extends Application {
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(SSPApplication.class.getResource("SSP.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 1000, 600);
-        stage.setTitle("Hello! Welcome to our stone-scissor-paper game");
+        stage.setTitle("Hello! Welcome to our rock-paper-scissors game");
         stage.setScene(scene);
         stage.show();
     }

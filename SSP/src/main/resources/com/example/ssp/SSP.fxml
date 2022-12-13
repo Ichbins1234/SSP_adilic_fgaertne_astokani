@@ -15,7 +15,7 @@
          <graphic>
             <ImageView fx:id="imgviewleft" fitHeight="220.0" fitWidth="322.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../images/361-3618497_scissors-clipart-19-scissors-image-graphic-huge-freebie.png" />
+                  <Image url="@images/361-3618497_scissors-clipart-19-scissors-image-graphic-huge-freebie.png" />
                </image>
             </ImageView>
          </graphic></Button>
@@ -23,7 +23,7 @@
          <graphic>
             <ImageView fx:id="imgviewmiddle" fitHeight="220.0" fitWidth="322.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../images/image_processing20210612-767-1ib2eof.png" />
+                  <Image url="@images/image_processing20210612-767-1ib2eof.png" />
                </image>
             </ImageView>
          </graphic></Button>
@@ -32,7 +32,7 @@
          <graphic>
             <ImageView fx:id="imgviewright" fitHeight="220.0" fitWidth="322.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../images/64750.jpg" />
+                  <Image url="@images/64750.jpg" />
                </image>
             </ImageView>
          </graphic>
